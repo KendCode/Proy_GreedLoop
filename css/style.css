@@ -1156,7 +1156,7 @@ ul.social_icont li a {
 }
 
 .testimonial_Carousel .carousel-indicators .active {
-     background-color: #4231bd;
+     background-color: #31bd3f;
 }
 
 #testimo .carousel-control-next,
@@ -1204,7 +1204,7 @@ ul.social_icont li a {
      font-weight: normal;
      padding-top: 10px;
      height: 150px;
-     border-bottom: #003471 solid 1px !important;
+     border-bottom: #007144 solid 1px !important;
      border: inherit;
 }
 
@@ -1307,7 +1307,7 @@ ul.social_icon li:last-child {
 }
 
 ul.social_icon li a {
-     color: #0b2554;
+     color: #0d540b;
      width: 40px;
      height: 40px;
      background: #fff;
