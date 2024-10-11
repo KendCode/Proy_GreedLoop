@@ -47,22 +47,16 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item active">
-                                 <a class="nav-link" href="index.html"> Home </a>
+                                 <a class="nav-link" href="index.php"> Principal </a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="about.html">about</a>
+                                 <a class="nav-link" href="pages/about.php">about</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="pages/loggin.php">services</a>
+                                 <a class="nav-link" href="pages/servicios.php">servicio</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="team.html">team </a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="client.html">Clients</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="contact.html"> contact us </a>
+                                 <a class="nav-link" href="pages/team.php">team </a>
                               </li>
                            </ul>
                         </div>
