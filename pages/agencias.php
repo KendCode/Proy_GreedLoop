@@ -1,11 +1,11 @@
 <?php
 
-include ("conexion/conexion.php");
-include("bloqueo.php"); 
-// Desactivar la visualización de errores
-ini_set('display_errors', 0);
-error_reporting(0);
-//include("destroy.php");
+// include ("conexion/conexion.php");
+// include("bloqueo.php"); 
+// // Desactivar la visualización de errores
+// ini_set('display_errors', 0);
+// error_reporting(0);
+// //include("destroy.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,56 +15,33 @@ error_reporting(0);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Ventas</title>
+    <title>AGENCIA</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/principal.css" rel="stylesheet" />
-    <link href="css/ventas.css" rel="stylesheet" />
+    <link href="../css/principal.css" rel="stylesheet" />
+    <link href="../css/ventas.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="principal.php"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars ms-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-
-                    <form class="d-flex" method="post" action="registro.php">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Compras
-                            <span id="cart-count" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Header-->
-    <header class="bg-dark py-5">
-        <div class="container px-4 px-lg-5 my-5">
-            <div class="text-center text-white">
-                <?php
-               session_start(); // Asegúrate de tener esto al inicio
-               if (isset($_SESSION['cli'])) {
-                   echo "<h1 class='display-4 fw-bolder'>".$_SESSION['cli']."</h1>";
-               } else {
-                   echo "<h1 class='display-4 fw-bolder'>No hay cliente registrado".$_SESSION['cli']."</h1>";
-               }
-                ?>
-                <p class="lead fw-normal text-white-50 mb-0">Elige los productos que desees</p>
-            </div>
-        </div>
-    </header>
+    <?php 
+        include("encabezado.php");
+    ?>
     <!-- Section-->
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
@@ -315,13 +292,6 @@ error_reporting(0);
             </div>
         </div>
     </section>
-
-    <!-- Footer-->
-    <footer class="py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Kender Mendoza 2024</p>
-        </div>
-    </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
@@ -343,6 +313,9 @@ error_reporting(0);
             input.checked = true;
         }
     </script>
+    
+        <?php include ("footer.php");?>
+
 </body>
 
 </html>

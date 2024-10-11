@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($resultado) {
                 echo "<script>alert('Te has registrado correctamente.');</script>";
-                echo '<script>window.location="../pages/servicios.php"</script>';
+                echo '<script>window.location="../pages/agencias.php"</script>';
             } else {
                 echo "<script>alert('Error al registrarse.');</script>";
                 echo '<script>window.location="../pages/loggin.php"</script>';

@@ -37,9 +37,7 @@
 <!-- body -->
 
 <body class="main-layout">
-   
-   <!-- end header inner -->
-   <!-- end header -->
+
    <!-- banner -->
    <section class="banner_main">
       <div class="container">
@@ -252,42 +250,7 @@
    </div>
    </div>
    <!-- end contact  section -->
-   <!--  footer -->
-   <footer>
-      <div class="footer">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12 ">
-                  <h2 style="color: white; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 3em;">GREEDLOOP</h2>
-               </div>
-               <div class="col-lg-5 col-md-6 col-sm-6">
-                  <h3>Contact Us</h3>
-                  <ul class="location_icon">
-                     <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>kenderacademico@gmail.com<br> ramiropatzi04@gmail.com</li>
-                     <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+591 60539021<br>+591 79660543</li>
-                  </ul>
-               </div>
-               
-               <div class="col-lg-2 col-md-6 col-sm-6">
-                  <h3>Creación de la pagina</h3>
-                  <ul class="link_icon">
-                     <li> <a href="#"> Octubre 1, 2024</a></li>
-                  </ul>
-               </div>
-               
-            </div>
-         </div>
-         <div class="copyright">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <p>© 2024 Derechos reservados<a href="https://html.design/"> </a></p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </footer>
+   <?php include ("pages/footer.php");?>
    <!-- end footer -->
    <!-- Javascript files-->
    <script src="js/jquery.min.js"></script>

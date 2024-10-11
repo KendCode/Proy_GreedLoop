@@ -104,7 +104,6 @@
 					<select name="id_sesion" id="id_sesion" class="form-control">
 						<option value="2">Agencia</option>
 						<option value="3">Usuario</option>
-						<option value="1">Administrador</option>
 					</select>
 				</div>
                 
