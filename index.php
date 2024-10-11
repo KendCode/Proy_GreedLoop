@@ -108,18 +108,17 @@
             <div class="col-md-12 col-lg-7">
                <div class="about_box">
                   <div class="titlepage">
-                     <h2><strong class="yellow">About US</strong><br> WE CAN HELP YOUR business GROW</h2>
+                     <h2><strong class="yellow">Sobre Nosotros</strong><br> TE PODEMOS AYUDAR A RECICLAR</h2>
                   </div>
-                  <h3>EVERYTHING YOU NEED IN ONE SOLUTION</h3>
-                  <span>HELP YOUR NEXT CAREER MOVE MORE SMOOTHER AND <br> MORE EFFICIENT</span>
-                  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of usingt</p>
-                  <span class="try">TRY ONLINE CV BUILDER FOR Free</span>
-                  <a class="read_morea" href="#">Get Started <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                  <h3>TODO LO QUE NECESITAS EN UNA SOLUCIÓN</h3>
+                  <span>AYUDA A QUE TU PRÓXIMA CARRERA SEA MÁS FÁCIL Y <br>EFICIENTE</span>
+                  <p>En nuestra aplicación de reciclaje, hemos diseñado una experiencia enfocada en la funcionalidad, 
+                     asegurando que cada usuario encuentre fácilmente las herramientas necesarias para contribuir al reciclaje</p>
                </div>
             </div>
             <div class="col-md-12 col-lg-5">
                <div class="about_img">
-                  <figure><img src="images/about_img2.jpg" alt="#" /></figure>
+                  <figure><img src="images/download (5).jpeg" alt="#" /></figure>
                </div>
             </div>
          </div>
@@ -134,9 +133,10 @@
          <div class="row">
             <div class="col-md-12 ">
                <div class="titlepage">
-                  <h2><strong class="yellow">PORTFOLIO</strong><br> CHOOSE A PROFESSIONAL DESIGN</h2>
-                  <span>Websites</span>
-                  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distrib</p>
+                  <h2><strong class="yellow">PORTFOLIO</strong><br> ELIGE UN DISEÑO PROFESIONAL</h2>
+                  <span>Sitios web</span>
+                  <p> Un usuario puede distraerse con los elementos visuales de una página, pero en
+                      nuestra aplicación de reciclaje, buscamos ofrecer una experiencia clara y funcional.</p>
                </div>
             </div>
          </div>
@@ -197,7 +197,7 @@
          <div class="row">
             <div class="col-md-12">
                <div class="titlepage">
-                  <h2><strong class="yellow">Team</strong><br>We Have a Professional Team of Business Analysts.</h2>
+                  <h2><strong class="yellow">Equipo</strong><br>Contamos con un equipo de analistas </h2>
                </div>
             </div>
          </div>
@@ -211,7 +211,7 @@
                               <div class="row">
                                  <div class="col-md-4 col-sm-6">
                                     <div id="ho_bg" class="team_img">
-                                       <img src="images/team1.png" alt="#" />
+                                       <img src="images/KENDER.jpeg" alt="#" />
                                        <div class="ho_socal">
                                           <ul class="social_icont">
                                              <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -223,7 +223,7 @@
                                  </div>
                                  <div class="col-md-4 col-sm-6">
                                     <div id="ho_bg" class="team_img">
-                                       <img src="images/team2.png" alt="#" />
+                                       <img src="images/ram.jpeg" alt="#" />
                                        <div class="ho_socal">
                                           <ul class="social_icont">
                                              <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -304,7 +304,7 @@
                <div class="col-lg-5 col-md-6 col-sm-6">
                   <h3>Contact Us</h3>
                   <ul class="location_icon">
-                     <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>kenderacademico@gmail.com<br> ramiropatzi04.com</li>
+                     <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>kenderacademico@gmail.com<br> ramiropatzi04@gmail.com</li>
                      <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+591 60539021<br>+591 79660543</li>
                   </ul>
                </div>
