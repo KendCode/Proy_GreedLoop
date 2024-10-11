@@ -40,11 +40,10 @@
                      </nav>
                   </div>
                   <div class="col-md-3 col-sm-5 d_none">
-                     <ul class="sign">
-                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                        <li><a class="sign_btn" href="pages/loggin.php">Registrate</a></li>
-                     </ul>
-                  </div>
+               <ul class="sign" style="display: flex;">
+                  <li><a class="sign_btn" href="pages/loggin.php">Inicio Sesion</a></li>
+               </ul>
+            </div>
                </div>
             </div>
          </div>

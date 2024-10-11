@@ -12,6 +12,7 @@
     <title>FORMULARIO DE REGISTRO E INICIO SESIÓN</title>
 </head>
 <body>
+    <!-- INICIO SESION -->
     <div class="container-form login">
         <div class="information">
             <div class="info-childs">
@@ -98,6 +99,14 @@
                             <input type="password" placeholder="Contraseña" name="password">
                         </label>
                     </div>
+                    <div class="form-group full-width">
+					<label class="form-label" for="id_sesion">Rol</label>
+					<select name="id_sesion" id="id_sesion" class="form-control">
+						<option value="2">Agencia</option>
+						<option value="3">Usuario</option>
+						<option value="1">Administrador</option>
+					</select>
+				</div>
                 
                     <input type="submit" value="Registrarse" name="registrarse">
                     <div class="alerta-error">Todos los campos son obligatorios</div>

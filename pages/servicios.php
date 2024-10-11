@@ -33,11 +33,6 @@
    </head>
    <!-- body -->
    <body class="main-layout">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="../images/loading.gif" alt="#" /></div>
-      </div>
-      <!-- end loader -->
       <!-- header -->
       <header>
          <!-- header inner -->
@@ -62,7 +57,7 @@
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                               <ul class="navbar-nav mr-auto">
                                  <li class="nav-item active">
-                                    <a class="nav-link" href="index.html"> Home  </a>
+                                    <a class="nav-link" href="../index.php"> Home  </a>
                                  </li>
                                  <li class="nav-item">
                                     <a class="nav-link" href="about.html">about</a>

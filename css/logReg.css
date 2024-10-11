@@ -27,7 +27,7 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  background-color: #14a027;
+  background-color: #94ffa2;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -39,27 +39,27 @@ body {
 
 .info-childs h2 {
   font-size: 2.5rem;
-  color: #333;
+  color: #000000;
 }
 
 .info-childs p {
   margin: 15px 0 ;
-  color: #555;
+  color: #000000;
 }
 
 .info-childs input {
   background-color: transparent;
   outline: none;
-  border: solid 2px #9191bd;
+  border: solid 2px #007746;
   border-radius: 20px;
   padding: 10px 20px;
-  color: #9191bd;
+  color: #007746;
   cursor: pointer;
   transition: background-color .3s ease;
 }
 
 .info-childs input:hover {
-  background-color: #9191bd;
+  background-color: #006028;
   border: none;
   color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
@@ -98,14 +98,14 @@ body {
   padding: 15px;
   cursor: pointer;
   margin: 0 10px;
-  color: #9191bd;
-  border: solid thin #9191bd;
+  color: #91bda4;
+  border: solid thin #91bd95;
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
 }
 
 .icons i:hover {
-  background-color: #c7c7f3;
+  background-color: #61b082;
   color: #fff;
 }
 
@@ -138,7 +138,7 @@ body {
 }
 
 .form input[type="submit"] {
-  background-color: #9191bd;
+  background-color: #0d6a2b;
   color: #fff;
   border-radius: 20px;
   border: none;
@@ -149,7 +149,7 @@ body {
 }
 
 .form input[type="submit"]:hover {
-  background-color: #7a7a9a;
+  background-color: #3eb439;
 }
 
 .hide {
