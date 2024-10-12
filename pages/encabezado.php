@@ -40,7 +40,7 @@
                      </nav>
                   </div>
                   <div class="col-md-3 col-sm-5 d_none">
-               <ul class="sign" style="display: flex;">
+               <ul class="sign">
                   <li><a class="sign_btn" href="pages/loggin.php">Inicio Sesion</a></li>
                </ul>
             </div>
