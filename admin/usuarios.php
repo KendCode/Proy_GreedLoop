@@ -108,7 +108,7 @@ include("../controladores/conexion.php");
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<div class="form-group label-floating">
 							<span class="control-label">¿A quién estas buscando?</span>
-							<input class="form-control" type="number" name="ci" required="" title="Buscar">
+							<input class="form-control" type="text" name="ci" required="" title="Buscar">
 						</div>
 					</div>
 					<div class="col-xs-12">
