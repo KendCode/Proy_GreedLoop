@@ -1,10 +1,10 @@
 <?php
 
-include("../conexion/conexion.php");
-include("bloqueo.php"); 
-// Desactivar la visualización de errores
-ini_set('display_errors', 0);
-error_reporting(0)
+include("../controladores/conexion.php");
+// include("bloqueo.php"); 
+// // Desactivar la visualización de errores
+// ini_set('display_errors', 0);
+// error_reporting(0)
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -31,9 +31,9 @@ error_reporting(0)
 					<img src="./assets/avatars/StudetMaleAvatar.png" alt="UserIcon">
 					<figcaption class="text-center text-titles">
 						<?php
-                			include("../conexion/conexion.php");
-                			//session_start();
-                			echo "<h3 class='display-4 fw-bolder'>".$_SESSION['admin']."</h3>"
+                			// include("../controladores/conexion.php");
+                			// //session_start();
+                			// echo "<h3 class='display-4 fw-bolder'>".$_SESSION['admin']."</h3>"
                 		?>
 						</figcaption>
 				</figure>
