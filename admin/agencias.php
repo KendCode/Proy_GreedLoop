@@ -46,16 +46,16 @@ include("../controladores/conexion.php");
 			<!-- SideBar Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
-					<a href="../administracion.php">
+					<a href="../pages/administracion.php">
 						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i>Panel
 					</a>
 				</li>
 				<li>
 				<li>
-					<a href="../admin/productos.php"><i class="zmdi zmdi-mall"></i> Productos</a>
+					<a href="agencias.php"><i class="zmdi zmdi-mall"></i> Agencias</a>
 				</li>
 				<li>
-					<a href="../admin/usuarios.php"><i class="zmdi zmdi-account"></i> Usuarios</a>
+					<a href="usuarios.php"><i class="zmdi zmdi-account"></i> Usuarios</a>
 				</li>
 			</ul>
 		</div>
