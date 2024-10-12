@@ -17,10 +17,10 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12 ">
-                  <h2 style="color: white; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 3em;">GREEDLOOP</h2>
+                  <h2 style="color: white; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 3em;">GREENLOOP</h2>
                </div>
                <div class="col-lg-5 col-md-6 col-sm-6">
-                  <h3>Contact Us</h3>
+                  <h3>Contactos</h3>
                   <ul class="location_icon">
                      <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>kenderacademico@gmail.com<br> ramiropatzi04@gmail.com</li>
                      <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+591 60539021<br>+591 79660543</li>

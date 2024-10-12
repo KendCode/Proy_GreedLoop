@@ -1,13 +1,13 @@
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
    <!-- style css -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="../css/style.css">
    <!-- Responsive-->
-   <link rel="stylesheet" href="css/responsive.css">
-   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" href="../css/responsive.css">
+   <link rel="stylesheet" href="../css/owl.carousel.min.css">
    <!-- fevicon -->
-   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <link rel="icon" href="../images/fevicon.png" type="image/gif" />
    <!-- Scrollbar Custom CSS -->
-   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
    <!-- Tweaks for older IEs-->
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
@@ -24,24 +24,24 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item active">
-                                 <a class="nav-link" href="index.php"> Principal </a>
+                                 <a class="nav-link" href="../index.php"> Principal </a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="pages/about.php">about</a>
+                                 <a class="nav-link" href="about.php">Acerca de</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="pages/servicios.php">servicio</a>
+                                 <a class="nav-link" href="servicios.php">servicios</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="pages/team.php">team </a>
+                                 <a class="nav-link" href="team.php">Equipo </a>
                               </li>
                            </ul>
                         </div>
                      </nav>
                   </div>
                   <div class="col-md-3 col-sm-5 d_none">
-               <ul class="sign" style="display: flex;">
-                  <li><a class="sign_btn" href="pages/loggin.php">Inicio Sesion</a></li>
+               <ul class="sign">
+                  <li><a class="sign_btn" href="pages/loggin.php">Inicia Sesion</a></li>
                </ul>
             </div>
                </div>
