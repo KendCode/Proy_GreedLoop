@@ -1,10 +1,10 @@
 <?php
 
-include("../conexion/conexion.php");
-include("bloqueo.php"); 
-// Desactivar la visualización de errores
-ini_set('display_errors', 0);
-error_reporting(0)
+include("../controladores/conexion.php");
+// include("bloqueo.php"); 
+// // Desactivar la visualización de errores
+// ini_set('display_errors', 0);
+// error_reporting(0)
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -30,7 +30,7 @@ error_reporting(0)
 				<figure class="full-box">
 					<img src="./assets/avatars/StudetMaleAvatar.png" alt="UserIcon">
 					<figcaption class="text-center text-titles"><?php
-                			include("../conexion/conexion.php");
+                			include("../controladores/conexion.php");
                 			session_start();
                 			echo "<h3 class='display-4 fw-bolder'>".$_SESSION['admin']."</h3>"
                 		?></figcaption>
@@ -78,7 +78,7 @@ error_reporting(0)
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-				<h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administrador <small>PRODUCTOS</small></h1>
+				<h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administrador <small>Agencias</small></h1>
 			</div>
 		</div>
 
@@ -86,12 +86,12 @@ error_reporting(0)
 			<ul class="breadcrumb breadcrumb-tabs">
 				<li>
 					<a href="fromPro.php" class="btn btn-info">
-						<i class="zmdi zmdi-plus" type="submit" value=""></i> &nbsp; NUEVO PRODUCTO
+						<i class="zmdi zmdi-plus" type="submit" value=""></i> &nbsp; NUEVA AGENCIA
 					</a>
 				</li>
 				<li>
 					<a href="listPro.php" class="btn btn-success">
-						<i class="zmdi zmdi-format-list-bulleted" type="sumit" value=""></i> &nbsp; LISTA DE PRODUCTOS
+						<i class="zmdi zmdi-format-list-bulleted" type="sumit" value=""></i> &nbsp; LISTA DE AGENCIAS
 					</a>
 				</li>
 			</ul>
@@ -146,7 +146,7 @@ while($fila=mysqli_fetch_array($respuesta))
 		<div class="container-fluid">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title"><i class="zmdi zmdi-search"></i> &nbsp; BUSCAR PRODUCTOS</h3>
+					<h3 class="panel-title"><i class="zmdi zmdi-search"></i> &nbsp; BUSCAR AGENCIA</h3>
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">

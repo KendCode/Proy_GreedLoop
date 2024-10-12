@@ -1,121 +1,154 @@
-
-
-    <?php
-include("encabezado.html");
-?>
-</head>
-<body>
 <?php
 
-include("conexion/conexion.php");
-session_start();
-echo "bienvenido usuario: ".$_SESSION['admin'];
-echo "<br>con nombre: ".$_SESSION['nombre'];
-//include("bloqueo.php");
+// include("conexion/conexion.php");
+// include("bloqueo.php"); 
+// // Desactivar la visualización de errores
+// ini_set('display_errors', 0);
+// error_reporting(0)
 ?>
-
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<title>Administrador</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../admin/css/main.css">
 </head>
 <body>
-    
+    <!-- SideBar -->
+	<section class="full-box cover dashboard-sideBar">
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+		<div class="full-box dashboard-sideBar-ct">
+			<!--SideBar Title -->
+			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+				ADMINISTRADOR <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+			</div>
+			<!-- SideBar User info -->
+			<div class="full-box dashboard-sideBar-UserInfo">
+				<figure class="full-box">
+					<img src="../admin/assets/avatars/AdminMaleAvatar.png" alt="UserIcon">
+					<figcaption class="text-center text-titles">
+						<?php
+                			// include("conexion/conexion.php");
+                			// session_start();
+                			// echo "<h2 class='display-4 fw-bolder'>".$_SESSION['admin']."</h2>";
+                		?>
+				</figcaption>
+				</figure>
+				<ul class="full-box list-unstyled text-center">
+					<li>
+						<a href="../index.php" title="Salir del sistema" class="btn-exit-system">
+							<i class="zmdi zmdi-power"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- SideBar Menu -->
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+				<li>
+					<a href="administracion.php">
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i>Panel
+					</a>
+				</li>
+				<li>
+						<li>
+							<a href="../admin/agencias.php"><i class="zmdi zmdi-mall"></i>  Agencias</a>
+						</li>
+						<li>
+							<a href="../admin/usuarios.php"><i class="zmdi zmdi-account"></i>  Usuarios</a>
+						</li>
+					
+				</li>
+			</ul>
+		</div>
+	</section>
 
-<form action="" method="post">
+	<!-- Content page-->
+	<section class="full-box dashboard-contentPage">
+		<!-- NavBar -->
+		<nav class="full-box dashboard-Navbar">
+			<ul class="full-box list-unstyled text-right">
+				<li class="pull-left">
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert" title="d"></i></a>
+				</li>
+			</ul>
+		</nav>
+		
+		<!-- TODO CONTENIDO PAGINA -->
+		<div class="container-fluid">
+			<div class="page-header">
+			  <h1 class="text-titles">Sistema</h1>
+			</div>
+		</div>
+		<div class="full-box text-center" style="padding: 30px 10px;">
+			<article class="full-box tile">
+				<div class="full-box tile-title text-center text-titles text-uppercase">
+					USUARIOS
+				</div>
+				<div class="full-box tile-icon text-center">
+					<i class="zmdi zmdi-account"></i>
+				</div>
+				<div class="full-box tile-number text-titles">
+						<?php
+						// Primer paso: definir la consulta
+						$consulta = "SELECT COUNT(*) AS total_usuarios FROM usuario;";
 
-	<h3>Ingrese el numero de cedula de identidad del estudiante que esta buscando</h3>
-	<input type="number" name="ci">
-	<input type="submit" name="btn1" value="BUSCAR">
+						// Segundo paso: ejecutar la consulta
+						$respuesta = mysqli_query($conexion, $consulta);
 
+						// Tercer paso: procesar el resultado
+						if ($respuesta) {
+						    $fila = mysqli_fetch_array($respuesta);
+						    $_SESSION['suma'] = $fila['total_usuarios'];
+						} else {
+						    $_SESSION['suma'] = 0; // En caso de error en la consulta
+						}
 
-</form>
-
-
-
-<?php
-$ci=$_POST['ci'];
-
-
-//primer paso
-$consulta="SELECT * FROM estudiante WHERE ci = '$ci'";
-//$consulta="SELECT * FROM estudiante";
-//segunda paso 
-$respuesta=mysqli_query($conexion,$consulta);
-
-// tercer paso
-// 
-while($fila=mysqli_fetch_array($respuesta))
-{
-
-//echo "el ci buscado es: ".$fila['ci'];
-//echo "el nombre del buscado es: ".$fila['nombre'];
-?>
-
-<table border="2">
-
-	<tr>
-		<th>CI</th>
-		<th>NOMBRE</th>
-		<th>APELLIDO PATERNO</th>
-		<th>APELLIDO MATERNO</th>
-		<th>GENERO</th>
-		<th>EDAD</th>
-		<th>CELULAR</th>
-		<th>CONTRASEÑA</th>
-		<th>ROL</th>
-		<th>ELIMINAR</th>
-		<th>MODIFICAR</th>
-
-	</tr>
-	<tr>
-		<td><?php echo $fila['ci'];?></td>
-		<td><?php echo $fila['nombre'];?></td>
-			<td><?php echo $fila['ap_pat'];?></td>
-			<td><?php echo $fila['ap_mat'];?></td>
-			<td><?php echo $fila['genero'];?></td>
-			<td><?php echo $fila['edad'];?></td>
-			<td><?php echo $fila['celular'];?></td>
-			<td><?php echo $fila['contrasena'];?></td>
-			<td><?php echo $fila['id_sesion'];?></td>
-			<?php $ci=$fila['ci']; 
-			//echo "el ci buscado es: ".$ci;
-			?>
-
-			<td><form action="control/abm.php" method="post">
-				<input type="hidden" name="ci" value="<?php echo $ci;?>">
-			<input type="submit" name="btn1" value="ELIMINAR">	
-			</form></td>
-			<td>
-				<form action="modificar.php" method="post">
-				<input type="hidden" name="ci" value="<?php echo $ci;?>">
-			<input type="submit" name="btn2" value="MODIFICAR">	
-			</form>
-			</td>
-	</tr>
-
-
-</table>
-
-
-
-<?php
-}
-
-
-?>
-
-
-<p>REGISTRO DE NUEVO ESTUDIANTE</p>
-<form action="registro.php">
+						
+						?>
+						<!-- Mostrar el número total de usuarios en HTML -->
+						<p class="full-box">
+						    <?php echo $_SESSION['suma']; ?>
+						</p>
+					<small>Registro</small>
+				</div>
+			</article>
+			<article class="full-box tile">
+				<div class="full-box tile-title text-center text-titles text-uppercase">
+					PRODUCTOS
+				</div>
+				<div class="full-box tile-icon text-center">
+					<i class="zmdi zmdi-mall"></i>
+				</div>
+				<div class="full-box tile-number text-titles">
+					<?php
+							// Primer paso: definir la consulta
+							$consul = "SELECT COUNT(*) AS total_producto FROM producto;";
 	
-	<input type="submit" value="REGISTRAR NUEVO ESTUDIANTE">
-</form>
-
+							// Segundo paso: ejecutar la consulta
+							$resp = mysqli_query($conexion, $consul);
+	
+							// Tercer paso: procesar el resultado
+							if ($resp) {
+								$fila = mysqli_fetch_array($resp);
+								$_SESSION['pro'] = $fila['total_producto'];
+							} else {
+								$_SESSION['pro'] = 0; // En caso de error en la consulta
+							}
+	
+							// Cerrar la conexión si es necesario
+							mysqli_close($conexion);
+							?>
+							<!-- Mostrar el número total de usuarios en HTML -->
+					<p class="full-box">
+						<?php echo $_SESSION['pro']; ?>
+					</p>
+					<small>Registro</small>
+				</div>
+			</article>
+		</div>
+	</section>
 
 
 

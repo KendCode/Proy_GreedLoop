@@ -28,7 +28,7 @@ if($usuario==$resp['email'] && $contrasena==$resp['password'] || $usuario==$resp
             $_SESSION['admin']=$usuario;
             $_SESSION['nombre']=$resp['nombre'];
             //$_SESSION['contrasena']=$contrasena;
-            echo '<script>window.location="../pages/administrador.php"</script>';
+            echo '<script>window.location="../pages/administracion.php"</script>';
             break;
         case 2:
             session_start();
