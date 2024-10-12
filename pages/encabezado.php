@@ -27,13 +27,13 @@
                                  <a class="nav-link" href="index.php"> Principal </a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="pages/about.php">about</a>
+                                 <a class="nav-link" href="pages/about.php">acerca de</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="pages/servicios.php">servicio</a>
+                                 <a class="nav-link" href="pages/servicios.php">servicios</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="pages/team.php">team </a>
+                                 <a class="nav-link" href="pages/team.php">equipo </a>
                               </li>
                            </ul>
                         </div>

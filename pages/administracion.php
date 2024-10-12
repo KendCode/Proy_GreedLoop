@@ -1,6 +1,6 @@
 <?php
 
-// include("conexion/conexion.php");
+include("../controladores/conexion.php");
 // include("bloqueo.php"); 
 // // Desactivar la visualización de errores
 // ini_set('display_errors', 0);
@@ -116,7 +116,7 @@
 			</article>
 			<article class="full-box tile">
 				<div class="full-box tile-title text-center text-titles text-uppercase">
-					PRODUCTOS
+					AGENCIAS
 				</div>
 				<div class="full-box tile-icon text-center">
 					<i class="zmdi zmdi-mall"></i>
@@ -124,7 +124,7 @@
 				<div class="full-box tile-number text-titles">
 					<?php
 							// Primer paso: definir la consulta
-							$consul = "SELECT COUNT(*) AS total_producto FROM producto;";
+							$consul = "SELECT COUNT(*) AS total_agencias FROM agencia;";
 	
 							// Segundo paso: ejecutar la consulta
 							$resp = mysqli_query($conexion, $consul);
@@ -132,9 +132,9 @@
 							// Tercer paso: procesar el resultado
 							if ($resp) {
 								$fila = mysqli_fetch_array($resp);
-								$_SESSION['pro'] = $fila['total_producto'];
+								$_SESSION['age'] = $fila['total_agencias'];
 							} else {
-								$_SESSION['pro'] = 0; // En caso de error en la consulta
+								$_SESSION['age'] = 0; // En caso de error en la consulta
 							}
 	
 							// Cerrar la conexión si es necesario
@@ -142,7 +142,7 @@
 							?>
 							<!-- Mostrar el número total de usuarios en HTML -->
 					<p class="full-box">
-						<?php echo $_SESSION['pro']; ?>
+						<?php echo $_SESSION['age']; ?>
 					</p>
 					<small>Registro</small>
 				</div>
