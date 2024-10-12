@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-10-2024 a las 09:05:44
+-- Tiempo de generación: 12-10-2024 a las 03:21:06
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -44,7 +44,12 @@ CREATE TABLE `agencia` (
 INSERT INTO `agencia` (`id_agencia`, `nombreAgencia`, `descripcion`, `direccion`, `imagen`, `id_categoria`, `id_usuario`) VALUES
 (1, 'EcoRecyclers', 'Recicladora dedicada solo a reciclar chatarra', 'Av. de las Estrellas 22, Distrito Cinemático', 'img_1', 1, 4),
 (2, 'Reciclarte', 'Recicladora dedicada solo a reciclar plasticos', 'Paseo de la Naturaleza 14, Ecoparque', 'img_2', 2, 5),
-(3, 'EcoTransforma', 'Recicladora dedicada solo a reciclar papeles', 'Calle Melodía 34, Barrio Musical', 'img_3', 3, 6);
+(3, 'EcoTransforma', 'Recicladora dedicada solo a reciclar papeles', 'Calle Melodía 34, Barrio Musical', 'img_3', 3, 6),
+(4, 'CicloVida', 'recicladora centrada a reciclar chatarra', 'Calle Sostenible 654, Zona Eco, Ciudad Futuro', 'agencia4', 1, 7),
+(5, 'ReusaMás', 'recicladora centrada a reciclar chatarra', 'Av Reciclaje 456, Zona Limpia', 'agencia5', 1, 8),
+(6, 'CeroHuella', 'recicladora centrada a reciclar plasticos', 'Boulevard Ciclo 111, Zona EcoVida', 'agencia6', 2, 9),
+(7, 'EcoRevolución', 'recicladora centrada a reciclar papeles', 'Calle Naturaleza 543, Barrio EcoFriendly', 'agencia7', 3, 10),
+(8, 'Reciclaje Urbano', 'recicladora centrada a reciclar plasticos', 'Calle Circular 789, Colonia Reuso', 'agencia8', 2, 11);
 
 -- --------------------------------------------------------
 
