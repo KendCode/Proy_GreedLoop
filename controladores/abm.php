@@ -85,7 +85,7 @@ echo "<script>alert('usuario modificado de manera correcta')</script>";
 }
 
 ?>
-<!-- MODIFICAR PRODUCTO -->
+<!-- MODIFICAR AGENCIA -->
 <?php
 
 if(isset($_POST['btn10'])){
@@ -94,17 +94,17 @@ if(isset($_POST['btn10'])){
 	if($btn10=="MODIFICAR")
 	{
 
-$id_producto=$_POST['id_producto'];
-$color=$_POST['color'];
+$id_agencia=$_POST['id_agencia'];
+$nombreAgencia=$_POST['nombreAgencia'];
 //echo "el id_producto es: ".$id_producto."y el nombre es: ".$color;
-$stock=$_POST['stock'];
-$talla=$_POST['talla'];
-$descrip_producto=$_POST['descrip_producto'];
-$precio_unitario=$_POST['precio_unitario'];
-$id_marca=$_POST['id_marca'];
+$descripcion=$_POST['descripcion'];
+$direccion=$_POST['direccion'];
+//$descrip_producto=$_POST['descrip_producto'];
+//$precio_unitario=$_POST['precio_unitario'];
+//$id_marca=$_POST['id_marca'];
 
 //primer paso
-$consulta="UPDATE producto SET color = '$color', stock = '$stock', talla ='$talla', descrip_producto = '$descrip_producto', precio_unitario = '$precio_unitario' WHERE producto.id_producto = '$id_producto'";
+$consulta="UPDATE agencia SET nombreAgencia = '$nombreAgencia', stock = '$stock', talla ='$talla', descrip_producto = '$descrip_producto', precio_unitario = '$precio_unitario' WHERE producto.id_producto = '$id_producto'";
 
 //segundo paso
 mysqli_query($conexion,$consulta);

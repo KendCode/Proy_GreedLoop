@@ -1,5 +1,5 @@
 <?php
- include("../controles/conexion.php");
+ include("../controladores/conexion.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -82,13 +82,13 @@ input[type="submit"]:hover {
 </style>
 <body>
 	
-<h3>MODIFICACIÓN PRODUCTO</h3>
+<h3>MODIFICACIÓN AGENCIA</h3>
 
 <?php 
 
-$id_producto=$_POST['id_producto'];
+$id_agencia=$_POST['id_agencia'];
 //primer paso
-$consulta="SELECT * FROM producto WHERE id_producto = '$id_producto'";
+$consulta="SELECT * FROM agencia WHERE id_agencia = '$id_agencia'";
 //$consulta="SELECT * FROM estudiante";
 //segunda paso 
 $respuesta=mysqli_query($conexion,$consulta);
@@ -102,31 +102,21 @@ while($fila=mysqli_fetch_array($respuesta))
 //echo "el nombre del buscado es: ".$fila['nombre'];
 
 ?>
-<form action="../control/abm.php" method="post">
-	ID PRODUCTO:
-	<input type="text" name="id_producto" readonly value="<?php echo $fila['id_producto']; ?>" >
+<form action="../controladores/abm.php" method="post">
+	ID AGENCIA:
+	<input type="text" name="id_agencia" readonly value="<?php echo $fila['id_agencia']; ?>" >
 	<br>
-	SABOR:
-	<input type="text" name="sabor" value="<?php echo $fila['sabor'];?>">
-
-	<br>
-STOCK:
-<input type="text" name="stock" value="<?php echo $fila['stock'];?>">
+	NOMBRE AGENCIA:
+	<input type="text" name="nombreAgencia" value="<?php echo $fila['nombreAgencia'];?>">
 
 	<br>
 DESCRIPCION:
-<input type="text" name="descrip_producto" value="<?php echo $fila['descrip_producto'];?>">
-
-
-	<br>
-PRECIO UNITARIO:
-<input type="text" name="precio_unitario" value="<?php echo $fila['precio_unitario'];?>">
-
+<input type="text" name="descripcion" value="<?php echo $fila['descripcion'];?>">
 
 	<br>
-NOMBRE PRODUCTO:
-<input type="text" name="nom_producto" value="<?php echo $fila['nom_producto'];?>">
-	<br>
+DESCRIPCION:
+<input type="text" name="direccion" value="<?php echo $fila['direccion'];?>">
+
 <input type="submit" name="btn10" value="MODIFICAR">
 </form>
 

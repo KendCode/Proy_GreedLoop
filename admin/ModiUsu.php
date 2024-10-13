@@ -102,9 +102,9 @@ while($fila=mysqli_fetch_array($respuesta))
 //echo "el nombre del buscado es: ".$fila['nombre'];
 
 ?>
-<form action="../controles/abm.php" method="post">
+<form action="../controladores/abm.php" method="post">
 	ID USUARIO:
-	<input type="text" name="usuario" readonly value="<?php echo $fila['usuario']; ?>" >
+	<input type="text" name="id_usuario" readonly value="<?php echo $fila['id_usuario']; ?>" >
 	<br>
 	NOMBRE:
 	<input type="text" name="nombre" value="<?php echo $fila['nombre'];?>">
@@ -125,9 +125,7 @@ EMAIL:
 
 	<br>
 CONTRACEÑA:
-<input type="password" name="contraceña" value="<?php echo $fila['contracena'];?>">
-
-
+<input type="password" name="password" value="<?php echo $fila['password'];?>">
 	<br>
 ID PERFIL:
 <input type="text" name="id_perfil" value="<?php echo $fila['id_perfil'];?>">
