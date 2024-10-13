@@ -1,7 +1,7 @@
 <?php
 
-include("../conexion/conexion.php");
-include("bloqueo.php"); 
+include("../controladores/conexion.php");
+//include("bloqueo.php"); 
 // Desactivar la visualización de errores
 //ini_set('display_errors', 0);
 //error_reporting(0)
@@ -67,45 +67,47 @@ while ($fila = mysqli_fetch_array($respuesta)) {
                 <div class="panel-body">
                     <div class="table-responsive">
                         <table class="table table-hover text-center">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th scope="col" class="text-center">CI</th>
+                        <thead>
+							<tr>
+                                    <th scope="col" class="text-center">ID USUARIO</th>
                                     <th scope="col" class="text-center">NOMBRE</th>
                                     <th scope="col" class="text-center">APELLIDO</th>
-                                    <th scope="col" class="text-center">CONTRASEÑA</th>
+                                    <th scope="col" class="text-center">NOM USUARIO</th>
                                     <th scope="col" class="text-center">EMAIL</th>
-                                    <th scope="col" class="text-center">N°CELULAR</th>
-                                    <th scope="col" class="text-center">DIRECCION</th>
-                                    <th scope="col" class="text-center">ID SESION</th>
-                                    <!--<th scope="col" class="text-center">MODIFICAR</th>
-                                    <th scope="col" class="text-center">ELIMINAR</th> -->
+                                    <th scope="col" class="text-center">CONTRACEÑA</th>
+                                    <th scope="col" class="text-center">ID PERFIL</th>
+                                    <!-- <th scope="col" class="text-center">ID SESION</th> -->
+                                    <th scope="col" class="text-center">MODIFICAR</th>
+                                    <th scope="col" class="text-center">ELIMINAR</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td scope="row"><?php echo $fila['ci']; ?></td>
+                                    <td scope="row"><?php echo $fila['id_usuario']; ?></td>
                                     <td scope="row"><?php echo $fila['nombre']; ?></td>
                                     <td scope="row"><?php echo $fila['apellido']; ?></td>
-                                    <td scope="row"><?php echo $fila['password']; ?></td>
+                                    <td scope="row"><?php echo $fila['nom_usuario']; ?></td>
                                     <td scope="row"><?php echo $fila['email']; ?></td>
-                                    <td scope="row"><?php echo $fila['nro_celular']; ?></td>
-                                    <td scope="row"><?php echo $fila['direccion']; ?></td>
-                                    <td scope="row"><?php echo $fila['id_sesion']; ?></td>
-                                    <?php //$ci=$fila['ci']; 
-                                    //echo "el ci buscado es: ".$ci;
-                                    ?>
-                                        <!-- <td>
+                                    <td scope="row"><?php echo $fila['password']; ?></td>
+                                    <td scope="row"><?php echo $fila['id_perfil']; ?></td>
+                                    <!-- <td scope="row"><?php echo $fila['id_sesion']; ?></td> -->
+									<?php //$ci=$fila['ci']; 
+									//echo "el ci buscado es: ".$ci;
+									?>
+										<td>
 											<form action="ModiUsu.php" method="post">
-												<input type="hidden" name="ci" value=" <?php echo $ci; ?> ">
+
+												<input type="hidden" name="nom_usuario" value=" <?php echo $nom_usuario; ?> ">
+
 												<input type="submit" name="btn3" value="MODIFICAR"  class="btn btn-success btn-raised btn-xs">	
 											</form>
 											</td> 
-									<td><form action="../control/abm.php" method="post">
-										<input type="hidden" name="ci" value="<?php echo $ci;?>">
+									<td><form action="../controladores/abm.php" method="post">
+										<input type="hidden" name="nom_usuario" value="<?php echo $nom_usuario;?>">
 										<input type="submit" name="btn1" value="ELIMINAR" class="btn btn-danger btn-raised btn-xs">	
 										</form>
-									</td> -->
-                                    <!-- 
+									</td>
+									<!-- 
 										<p>REGISTRO DE NUEVO ESTUDIANTE</p>
 										<form action="registro.php">
 
@@ -113,8 +115,8 @@ while ($fila = mysqli_fetch_array($respuesta)) {
 										</form>
 
 										 -->
-                                </tr>
-                            </tbody>
+								</tr>
+							</tbody>
                         </table>
                     </div>
                 </div>

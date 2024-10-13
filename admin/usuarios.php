@@ -108,7 +108,7 @@ include("../controladores/conexion.php");
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<div class="form-group label-floating">
 							<span class="control-label">¿A quién estas buscando?</span>
-							<input class="form-control" type="text" name="NomUsu" required="" title="Buscar">
+							<input class="form-control" type="text" name="nom_usuario" required="" title="Buscar">
 						</div>
 					</div>
 					<div class="col-xs-12">
@@ -121,10 +121,10 @@ include("../controladores/conexion.php");
 		</div>
 
 <?php
-$NomUsu = $_POST['NomUsu'];
+$nom_usuario = $_POST['nom_usuario'];
 
 //primer paso
-$consulta="SELECT * FROM usuario WHERE nom_usuario = '$NomUsu'";
+$consulta="SELECT * FROM usuario WHERE nom_usuario = '$nom_usuario'";
 //$consulta="SELECT * FROM usuario";
 //segunda paso 
 $respuesta=mysqli_query($conexion,$consulta);

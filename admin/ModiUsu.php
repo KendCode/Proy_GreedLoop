@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MODIFICACIÓN</title>
+	<title>MODIFICACIÓN USUARIO</title>
 	<link rel="stylesheet" href="">
 </head>
 <style>
@@ -83,10 +83,7 @@ input[type="submit"]:hover {
 <body>
 	
 <h3>MODIFICACIÓN USUARIO</h3>
-
 <?php 
-
-
 $nom_usuario=$_POST['nom_usuario'];
 //primer paso
 $consulta="SELECT * FROM usuario WHERE nom_usuario = '$nom_usuario'";
@@ -99,14 +96,14 @@ $respuesta=mysqli_query($conexion,$consulta);
 // 
 while($fila=mysqli_fetch_array($respuesta))
 {
-
+//echo "el nombre del buscado es: ".$fila['nom_usuario'];
+    
 //echo "el ci buscado es: ".$fila['ci'];
-//echo "el nombre del buscado es: ".$fila['nombre'];
 
 ?>
 <form action="../controladores/abm.php" method="post">
 	ID USUARIO:
-	<input type="text" name="id_usuario" readonly value="<?php echo $fila['id_usuario']; ?>" >
+	<input type="number" name="id_usuario" readonly value="<?php echo $fila['id_usuario']; ?>" >
 	<br>
 	NOMBRE:
 	<input type="text" name="nombre" value="<?php echo $fila['nombre'];?>">
@@ -118,26 +115,16 @@ APELLIDO:
 	<br>
 NOM USUARIO:
 <input type="text" name="nom_usuario" value="<?php echo $fila['nom_usuario'];?>">
-
-
 	<br>
 EMAIL:
 <input type="text" name="email" value="<?php echo $fila['email'];?>">
-
-
 	<br>
-CONTRACEÑA:
-<input type="password" name="password" value="<?php echo $fila['password'];?>">
+CONTRASEÑA:
+<input type="text" name="password" value="<?php echo $fila['password'];?>">
 	<br>
 ID PERFIL:
 <input type="text" name="id_perfil" value="<?php echo $fila['id_perfil'];?>">
-
-
 	<br>
-<!-- SESION
-<input type="text" name="id_sesion" value=""> -->
-
-
 <input type="submit" name="btn3" value="MODIFICAR">
 </form>
 

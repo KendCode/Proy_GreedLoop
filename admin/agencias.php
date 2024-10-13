@@ -1,8 +1,8 @@
 <?php
 
 include("../controladores/conexion.php");
-// include("bloqueo.php"); 
-// // Desactivar la visualización de errores
+// include("bloqueo.php"); s
+// Desactivar la visualización de errore
 // ini_set('display_errors', 0);
 // error_reporting(0)
 ?>

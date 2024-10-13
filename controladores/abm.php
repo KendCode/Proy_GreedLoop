@@ -37,15 +37,15 @@ if(isset($_POST['btn11'])){
 
 
 
-$id_producto=$_POST['id_producto'];
+$id_agencia=$_POST['id_agencia'];
 //echo "el ci buscado es: ".$ci;
 
 //DELETE FROM estudiante WHERE estudiante.ci = '$ci'
 // primer
-$consulta= "DELETE FROM producto WHERE producto.id_producto = '$id_producto'";
+$consulta= "DELETE FROM agencia WHERE agencia.id_agencia = '$id_agencia'";
 //segundo paso
 mysqli_query($conexion,$consulta);
-echo "<script>alert('PRODUCTO Eliminado de manera correcta')</script>";
+echo "<script>alert('Agencia Eliminado de manera correcta')</script>";
    echo '<script>window.location="../administracion.php"</script>';
 
 	}
@@ -104,12 +104,12 @@ $direccion=$_POST['direccion'];
 //$id_marca=$_POST['id_marca'];
 
 //primer paso
-$consulta="UPDATE agencia SET nombreAgencia = '$nombreAgencia', stock = '$stock', talla ='$talla', descrip_producto = '$descrip_producto', precio_unitario = '$precio_unitario' WHERE producto.id_producto = '$id_producto'";
+$consulta="UPDATE agencia SET nombreAgencia = '$nombreAgencia', descripcion = '$descripcion', direccion ='$direccion' WHERE agencia.id_agencia = '$id_agencia'";
 
 //segundo paso
 mysqli_query($conexion,$consulta);
 
-echo "<script>alert('usuario modificado de manera correcta')</script>";
+echo "<script>alert('Agencia modificado de manera correcta')</script>";
    echo '<script>window.location="../administracion.php"</script>';
 
 	}
