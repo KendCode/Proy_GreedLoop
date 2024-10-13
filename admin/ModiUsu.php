@@ -103,8 +103,8 @@ while($fila=mysqli_fetch_array($respuesta))
 
 ?>
 <form action="../controles/abm.php" method="post">
-	CI:
-	<input type="text" name="ci" readonly value="<?php echo $fila['ci']; ?>" >
+	ID USUARIO:
+	<input type="text" name="usuario" readonly value="<?php echo $fila['usuario']; ?>" >
 	<br>
 	NOMBRE:
 	<input type="text" name="nombre" value="<?php echo $fila['nombre'];?>">
@@ -114,8 +114,8 @@ APELLIDO:
 <input type="text" name="apellido" value="<?php echo $fila['apellido'];?>">
 
 	<br>
-PASSWORD:
-<input type="text" name="password" value="<?php echo $fila['password'];?>">
+NOM USUARIO:
+<input type="text" name="nom_usuario" value="<?php echo $fila['nom_usuario'];?>">
 
 
 	<br>
@@ -124,18 +124,18 @@ EMAIL:
 
 
 	<br>
-NRO CELULAR:
-<input type="text" name="nro_celular" value="<?php echo $fila['nro_celular'];?>">
+CONTRACEÑA:
+<input type="password" name="contraceña" value="<?php echo $fila['contraceña'];?>">
 
 
 	<br>
-DIRECCION:
-<input type="text" name="direccion" value="<?php echo $fila['direccion'];?>">
+ID PERFIL:
+<input type="text" name="id_perfil" value="<?php echo $fila['id_perfil'];?>">
 
 
 	<br>
-SESION
-<input type="text" name="id_sesion" value="<?php echo $fila['id_sesion'];?>">
+<!-- SESION
+<input type="text" name="id_sesion" value=""> -->
 
 
 <input type="submit" name="btn3" value="MODIFICAR">
