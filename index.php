@@ -79,7 +79,7 @@
          <div class="row">
             <div class="col-md-7 col-lg-7">
                <div class="text-bg">
-                  <h1>Bienvenidos a<br>GreegLoop</h1>
+                  <h1>Bienvenidos a<br>GreenLoop</h1>
                   <p>Aplicación que te guiará a puntos más cercanos para reciclar</p>
                </div>
             </div>
