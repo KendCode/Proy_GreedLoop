@@ -102,7 +102,7 @@ while($fila=mysqli_fetch_array($respuesta))
 //echo "el nombre del buscado es: ".$fila['nombre'];
 
 ?>
-<form action="../control/abm.php" method="post">
+<form action="../controles/abm.php" method="post">
 	CI:
 	<input type="text" name="ci" readonly value="<?php echo $fila['ci']; ?>" >
 	<br>

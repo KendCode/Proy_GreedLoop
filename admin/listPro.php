@@ -36,7 +36,7 @@ include("../controladores/conexion.php");
                     <input class="btn btn-info" type="submit" name="btn1" value="LISTA PRODUCTOS">
 				</li>
 				<li>
-					<a href="productos.php" class="btn btn-success">
+					<a href="agencias.php" class="btn btn-success">
 						<i class="zmdi zmdi-format-list-bulleted" type="sumit" value=""></i> &nbsp; ADMINISTRADOR
 					</a>
 				</li>
@@ -71,7 +71,7 @@ while ($fila = mysqli_fetch_array($respuesta)) {
 									<th class="text-center">NOMBRE AGENCIA</th>
 									<th class="text-center">DESCRIPCION</th>
 									<th class="text-center">DIRECCION</th>
-									<th class="text-center">IMAGEN</th>
+									<!-- <th class="text-center">IMAGEN</th> -->
 									<th class="text-center">MODIFICAR</th>
 									<th class="text-center">ELIMINAR</th>
 								</tr>
@@ -82,7 +82,7 @@ while ($fila = mysqli_fetch_array($respuesta)) {
 									<td><?php echo $fila['nombreAgencia'];?></td>
 									<td><?php echo $fila['descripcion'];?></td>
 									<td><?php echo $fila['direccion'];?></td>
-									<td><?php echo $fila['imagen'];?></td>
+									<!-- <td><?php echo $fila['imagen'];?></td> -->
 									<?php //$ci=$fila['ci']; 
 									//echo "el ci buscado es: ".$ci;
 									?>
