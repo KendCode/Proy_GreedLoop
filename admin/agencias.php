@@ -122,14 +122,11 @@ include("../controladores/conexion.php");
 
 
 		</form> -->
-
-
-
 <?php
-$id_producto=$_POST['id_producto'];
+$id_agencia=$_POST['id_agencia'];
 
 //primer paso
-$consulta="SELECT * FROM producto WHERE id_producto = '$id_producto'";
+$consulta="SELECT * FROM agencia WHERE id_agencia = '$id_agencia'";
 //$consulta="SELECT * FROM producto";
 //segunda paso 
 $respuesta=mysqli_query($conexion,$consulta);
@@ -154,23 +151,21 @@ while($fila=mysqli_fetch_array($respuesta))
 							<thead>
 								<tr>
 									<th class="text-center">#</th>
-									<th class="text-center">SABOR</th>
-									<th class="text-center">STOCK</th>
+									<th class="text-center">NOMBRE AGENCIA</th>
 									<th class="text-center">DESCRIPCION</th>
-									<th class="text-center">PRECIO UNI.</th>
-									<th class="text-center">NOMBRE PRODUCTO</th>
+									<th class="text-center">DIRECCION</th>
+									<th class="text-center">IMAGEN</th>
 									<th class="text-center">MODIFICAR</th>
 									<th class="text-center">ELIMINAR</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td><?php echo $fila['id_producto'];?></td>
-									<td><?php echo $fila['sabor'];?></td>
-									<td><?php echo $fila['stock'];?></td>
-									<td><?php echo $fila['descrip_producto'];?></td>
-									<td><?php echo $fila['precio_unitario'];?></td>
-									<td><?php echo $fila['nom_producto'];?></td>
+									<td><?php echo $fila['id_agencia'];?></td>
+									<td><?php echo $fila['nombreAgencia'];?></td>
+									<td><?php echo $fila['descripcion'];?></td>
+									<td><?php echo $fila['direccion'];?></td>
+									<td><?php echo $fila['imagen'];?></td>
 									<?php //$ci=$fila['ci']; 
 									//echo "el ci buscado es: ".$ci;
 									?>

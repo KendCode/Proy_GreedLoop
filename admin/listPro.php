@@ -1,8 +1,8 @@
 <?php
 
-include("../conexion/conexion.php");
+include("../controladores/conexion.php");
 
-include("bloqueo.php");
+// include("bloqueo.php");
 ?>
 <html lang="es">
 <head>
@@ -46,7 +46,7 @@ include("bloqueo.php");
 <?php
 
 //primer paso
-$consulta = "SELECT * FROM producto";
+$consulta = "SELECT * FROM agencia";
 //$consulta="SELECT * FROM ventas";
 //segunda paso 
 $respuesta = mysqli_query($conexion, $consulta);
@@ -65,30 +65,28 @@ while ($fila = mysqli_fetch_array($respuesta)) {
                 <div class="panel-body">
                     <div class="table-responsive">
                         <table class="table table-hover text-center">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th scope="col" class="text-center">#</th>
-                                    <th scope="col" class="text-center">SABOR</th>
-                                    <th scope="col" class="text-center">STOCK</th>
-                                    <th scope="col" class="text-center">DESCRIPCION</th>
-                                    <th scope="col" class="text-center">PRECIO UNI.</th>
-                                    <th scope="col" class="text-center">NOMBRE</th>
-                                    <!-- <th scope="col" class="text-center">MODIFICAR</th>
-                                    <th scope="col" class="text-center">ELIMINAR</th> -->
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td scope="row"><?php echo $fila['id_producto']; ?></td>
-                                    <td scope="row"><?php echo $fila['sabor']; ?></td>
-                                    <td scope="row"><?php echo $fila['stock']; ?></td>
-                                    <td scope="row"><?php echo $fila['descrip_producto']; ?></td>
-                                    <td scope="row"><?php echo $fila['precio_unitario']; ?></td>
-                                    <td scope="row"><?php echo $fila['nom_producto']; ?></td>
-                                    <?php //$ci=$fila['ci']; 
-                                    //echo "el ci buscado es: ".$ci;
-                                    ?>
-                                   <!-- <td>
+                        <thead>
+								<tr>
+									<th class="text-center">#</th>
+									<th class="text-center">NOMBRE AGENCIA</th>
+									<th class="text-center">DESCRIPCION</th>
+									<th class="text-center">DIRECCION</th>
+									<th class="text-center">IMAGEN</th>
+									<th class="text-center">MODIFICAR</th>
+									<th class="text-center">ELIMINAR</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><?php echo $fila['id_agencia'];?></td>
+									<td><?php echo $fila['nombreAgencia'];?></td>
+									<td><?php echo $fila['descripcion'];?></td>
+									<td><?php echo $fila['direccion'];?></td>
+									<td><?php echo $fila['imagen'];?></td>
+									<?php //$ci=$fila['ci']; 
+									//echo "el ci buscado es: ".$ci;
+									?>
+									<td>
 										<form action="ModiPro.php" method="post">
 											<input type="hidden" name="id_producto" value="<?php echo $id_producto;?> ">
 											<input type="submit" name="btn10" value="MODIFICAR"  class="btn btn-success btn-raised btn-xs">	
@@ -98,17 +96,9 @@ while ($fila = mysqli_fetch_array($respuesta)) {
 										<input type="hidden" name="id_producto" value="<?php echo $id_producto;?>">
 										<input type="submit" name="btn11" value="ELIMINAR" class="btn btn-danger btn-raised btn-xs">	
 										</form>
-									</td> -->
-                                    <!-- 
-										<p>REGISTRO DE NUEVO ESTUDIANTE</p>
-										<form action="registro.php">
-
-											<input type="submit" value="REGISTRAR NUEVO ESTUDIANTE">
-										</form>
-
-										 -->
-                                </tr>
-                            </tbody>
+									</td>
+								</tr>
+							</tbody>
                         </table>
                     </div>
                 </div>
