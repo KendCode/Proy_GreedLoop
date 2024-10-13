@@ -175,7 +175,9 @@ while($fila=mysqli_fetch_array($respuesta))
 									?>
 										<td>
 											<form action="ModiUsu.php" method="post">
+
 												<input type="hidden" name="nom_usuario" value=" <?php echo $nom_usuario; ?> ">
+
 												<input type="submit" name="btn3" value="MODIFICAR"  class="btn btn-success btn-raised btn-xs">	
 											</form>
 											</td> 

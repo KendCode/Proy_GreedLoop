@@ -86,9 +86,11 @@ input[type="submit"]:hover {
 
 <?php 
 
+
 $nom_usuario=$_POST['nom_usuario'];
 //primer paso
 $consulta="SELECT * FROM usuario WHERE nom_usuario = '$nom_usuario'";
+
 //$consulta="SELECT * FROM estudiante";
 //segunda paso 
 $respuesta=mysqli_query($conexion,$consulta);
@@ -126,8 +128,6 @@ EMAIL:
 	<br>
 CONTRACEÑA:
 <input type="password" name="password" value="<?php echo $fila['password'];?>">
-
-
 	<br>
 ID PERFIL:
 <input type="text" name="id_perfil" value="<?php echo $fila['id_perfil'];?>">
