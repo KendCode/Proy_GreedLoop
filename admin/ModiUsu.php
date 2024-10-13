@@ -1,5 +1,5 @@
 <?php
- include("../conexion/conexion.php");
+ include("../controladores/conexion.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -86,9 +86,9 @@ input[type="submit"]:hover {
 
 <?php 
 
-$ci=$_POST['ci'];
+$NomUsu=$_POST['NomUsu'];
 //primer paso
-$consulta="SELECT * FROM usuario WHERE ci = '$ci'";
+$consulta="SELECT * FROM usuario WHERE nom_usuario = '$NomUsu'";
 //$consulta="SELECT * FROM estudiante";
 //segunda paso 
 $respuesta=mysqli_query($conexion,$consulta);
