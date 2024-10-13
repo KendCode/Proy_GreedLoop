@@ -86,9 +86,9 @@ input[type="submit"]:hover {
 
 <?php 
 
-$NomUsu=$_POST['NomUsu'];
+$nom_usuario=$_POST['nom_usuario'];
 //primer paso
-$consulta="SELECT * FROM usuario WHERE nom_usuario = '$NomUsu'";
+$consulta="SELECT * FROM usuario WHERE nom_usuario = '$nom_usuario'";
 //$consulta="SELECT * FROM estudiante";
 //segunda paso 
 $respuesta=mysqli_query($conexion,$consulta);
