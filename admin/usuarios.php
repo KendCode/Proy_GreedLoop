@@ -108,7 +108,7 @@ include("../controladores/conexion.php");
 					<div class="col-xs-12 col-md-8 col-md-offset-2">
 						<div class="form-group label-floating">
 							<span class="control-label">¿A quién estas buscando?</span>
-							<input class="form-control" type="text" name="ci" required="" title="Buscar">
+							<input class="form-control" type="text" name="NomUsu" required="" title="Buscar">
 						</div>
 					</div>
 					<div class="col-xs-12">
@@ -121,10 +121,10 @@ include("../controladores/conexion.php");
 		</div>
 
 <?php
-$ci = $_POST['ci'];
+$NomUsu = $_POST['NomUsu'];
 
 //primer paso
-$consulta="SELECT * FROM usuario WHERE ci = '$ci'";
+$consulta="SELECT * FROM usuario WHERE nom_usuario = '$NomUsu'";
 //$consulta="SELECT * FROM usuario";
 //segunda paso 
 $respuesta=mysqli_query($conexion,$consulta);
@@ -141,35 +141,35 @@ while($fila=mysqli_fetch_array($respuesta))
 		<div class="container-fluid">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title"><i class="zmdi zmdi-search"></i> &nbsp; BUSCAR PRODUCTOS</h3>
+					<h3 class="panel-title"><i class="zmdi zmdi-search"></i> &nbsp; BUSCAR USUARIO </h3>
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">
 						<table class="table table-hover text-center">
 							<thead>
 							<tr>
-                                    <th scope="col" class="text-center">CI</th>
+                                    <th scope="col" class="text-center">ID USUARIO</th>
                                     <th scope="col" class="text-center">NOMBRE</th>
                                     <th scope="col" class="text-center">APELLIDO</th>
-                                    <th scope="col" class="text-center">CONTRASEÑA</th>
+                                    <th scope="col" class="text-center">NOM USUARIO</th>
                                     <th scope="col" class="text-center">EMAIL</th>
-                                    <th scope="col" class="text-center">N°CELULAR</th>
-                                    <th scope="col" class="text-center">DIRECCION</th>
-                                    <th scope="col" class="text-center">ID SESION</th>
+                                    <th scope="col" class="text-center">CONTRACEÑA</th>
+                                    <th scope="col" class="text-center">ID PERFIL</th>
+                                    <!-- <th scope="col" class="text-center">ID SESION</th> -->
                                     <th scope="col" class="text-center">MODIFICAR</th>
                                     <th scope="col" class="text-center">ELIMINAR</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td scope="row"><?php echo $fila['ci']; ?></td>
+                                    <td scope="row"><?php echo $fila['id_usuario']; ?></td>
                                     <td scope="row"><?php echo $fila['nombre']; ?></td>
                                     <td scope="row"><?php echo $fila['apellido']; ?></td>
-                                    <td scope="row"><?php echo $fila['password']; ?></td>
+                                    <td scope="row"><?php echo $fila['nom_usuario']; ?></td>
                                     <td scope="row"><?php echo $fila['email']; ?></td>
-                                    <td scope="row"><?php echo $fila['nro_celular']; ?></td>
-                                    <td scope="row"><?php echo $fila['direccion']; ?></td>
-                                    <td scope="row"><?php echo $fila['id_sesion']; ?></td>
+                                    <td scope="row"><?php echo $fila['password']; ?></td>
+                                    <td scope="row"><?php echo $fila['id_perfil']; ?></td>
+                                    <!-- <td scope="row"><?php echo $fila['id_sesion']; ?></td> -->
 									<?php //$ci=$fila['ci']; 
 									//echo "el ci buscado es: ".$ci;
 									?>
