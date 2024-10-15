@@ -34,7 +34,6 @@
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../css/principal.css" rel="stylesheet" />
     <link href="../css/ventas.css" rel="stylesheet" />
 </head>
 

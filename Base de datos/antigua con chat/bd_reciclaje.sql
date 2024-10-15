@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-10-2024 a las 00:05:47
+-- Tiempo de generación: 13-10-2024 a las 10:08:27
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -75,6 +75,31 @@ INSERT INTO `categoria` (`id_categoria`, `nombreCat`, `descripcion`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `messages`
+--
+
+CREATE TABLE `messages` (
+  `msg_id` int(11) NOT NULL,
+  `id_mensaje_entrante` int(255) NOT NULL,
+  `id_mensaje_saliente` int(255) NOT NULL,
+  `msg` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `messages`
+--
+
+INSERT INTO `messages` (`msg_id`, `id_mensaje_entrante`, `id_mensaje_saliente`, `msg`) VALUES
+(1, 1622688038, 340066300, 'hola man'),
+(2, 340066300, 1622688038, 'bien'),
+(3, 1622688038, 340066300, 'hola'),
+(4, 340066300, 1622688038, 'hola'),
+(5, 440971576, 1622688038, 'hola pedro, necesito tu ayuda'),
+(6, 1622688038, 440971576, 'hola Mauricio, claro, dime !!');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `perfil_usuario`
 --
 
@@ -106,7 +131,7 @@ CREATE TABLE `usuario` (
   `nom_usuario` varchar(100) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
   `password` int(100) NOT NULL,
-  `imgUsu` varchar(100) DEFAULT NULL,
+  `status` varchar(100) DEFAULT NULL,
   `id_perfil` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -114,13 +139,13 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `nom_usuario`, `email`, `password`, `imgUsu`, `id_perfil`) VALUES
-(1, 'Kender', 'Mendoza', 'kend', 'kender@email.com', 123, 'ava1', 1),
-(2, 'Daniel', 'Choque', 'dani12345', 'dani@email.com', 1234, 'ava2', 1),
-(3, 'Ramiro', 'Patzi', 'ram123', 'ram@email.com', 12345, 'ava3', 1),
-(4, 'Eduard', 'Quispe', 'eduard', 'eduar@email.com', 555555, 'ava4', 2),
-(5, 'Jose', 'Torrez', 'jose2', 'jose@email.com', 66666, 'ava5', 2),
-(6, 'Rob', 'Lupin', 'rob44', 'rob@email.com', 77777, 'ava6', 3);
+INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `nom_usuario`, `email`, `password`, `status`, `id_perfil`) VALUES
+(1, 'Kender', 'Mendoza', 'kend', 'kender@email.com', 123, 'disponible', 1),
+(2, 'Daniel', 'Choque', 'dani12345', 'dani@email.com', 1234, 'disponible', 1),
+(3, 'Ramiro', 'Patzi', 'ram123', 'ram@email.com', 12345, 'disponible', 1),
+(4, 'Eduard', 'Quispe', 'eduard', 'eduar@email.com', 555555, 'desconectado', 2),
+(5, 'Jose', 'Torrez', 'jose2', 'jose@email.com', 66666, 'desconectado', 2),
+(6, 'Rob', 'Lupin', 'rob44', 'rob@email.com', 77777, 'disponible', 3);
 
 --
 -- Índices para tablas volcadas
@@ -139,6 +164,12 @@ ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id_categoria`);
 
 --
+-- Indices de la tabla `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`msg_id`);
+
+--
 -- Indices de la tabla `perfil_usuario`
 --
 ALTER TABLE `perfil_usuario`
@@ -153,6 +184,12 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
