@@ -344,6 +344,7 @@
             input.checked = true;
         }
     </script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script> -->
 </body>
 <?php include ("footer.php");?>
 </html>
