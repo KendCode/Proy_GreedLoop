@@ -284,6 +284,7 @@
       </div>
    </div>
    </div>
+   
    <!-- end contact  section -->
    <?php include ("pages/footer.php");?>
    <!-- end footer -->

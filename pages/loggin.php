@@ -100,13 +100,11 @@
                         </label>
                     </div>
                     <div class="form-group full-width">
-					<label class="form-label" for="id_sesion">Rol</label>
-					<select name="id_sesion" id="id_sesion" class="form-control">
+					<select name="id_perfil" id="id_sesion" class="form-control">
 						<option value="2">Agencia</option>
 						<option value="3">Usuario</option>
 					</select>
 				</div>
-                
                     <input type="submit" value="Registrarse" name="registrarse">
                     <div class="alerta-error">Todos los campos son obligatorios</div>
                     <div class="alerta-exito">Te registraste correctamente</div>

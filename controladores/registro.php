@@ -9,9 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['nom_usuario'];
     $correo_electronico = $_POST['correo_electronico'];
     $contrasena = $_POST['password'];
+    $id_perfil = $_POST['id_perfil'];
 
     // Verificación de campos vacíos
-    if (!empty($nombre) && !empty($apellido) && !empty($usuario) && !empty($correo_electronico) && !empty($contrasena)) {
+    if (!empty($nombre) && !empty($apellido) && !empty($usuario) && !empty($correo_electronico) && !empty($contrasena)  && !empty($id_perfil)){
         
         // Verificamos si el usuario ya está registrado
         $check_query = "SELECT * FROM usuario WHERE nom_usuario = '$usuario'";
@@ -24,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             // Si el usuario no está registrado, insertamos el usuario con id_sesion = 3
             $query = "INSERT INTO usuario (nombre, apellido, nom_usuario, email, password, id_perfil) 
-                      VALUES ('$nombre', '$apellido', '$usuario', '$correo_electronico', '$contrasena', 3)";
+                      VALUES ('$nombre', '$apellido', '$usuario', '$correo_electronico', '$contrasena', $id_perfil)";
 
             $resultado = mysqli_query($conexion, $query);
 
