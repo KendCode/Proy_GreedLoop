@@ -35,9 +35,16 @@
                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               <img src="../images/kender.png" alt="User Image" class="rounded-circle" style="width: 30px; height: 30px; margin-right: 10px;">
                               <span><?php
-                              include("../controladores/conexion.php");
-                              session_start();
-                              echo " ".$_SESSION['usuario'];
+                                 session_start();
+                                 include("../controladores/conexion.php");
+
+                                 if (isset($_SESSION['usuario'])) {
+                                    echo (" " . $_SESSION['usuario']);
+                                 } elseif (isset($_SESSION['agente'])) {
+                                    echo (" " . $_SESSION['agente']);
+                                 } else {
+                                    echo "Usuario no autenticado";
+                                 }
                               ?></span>
                            </a>
                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
