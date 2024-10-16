@@ -32,7 +32,7 @@ if($usuario==$resp['email'] && $contrasena==$resp['password'] || $usuario==$resp
             break;
         case 2:
             session_start();
-            $_SESSION['admin']=$usuario;
+            $_SESSION['agente']=$usuario;
             $_SESSION['nombre']=$resp['nombre'];
             echo '<script>window.location="../pages/index(age).php"</script>';
             break;

@@ -34,7 +34,11 @@
                         <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               <img src="../images/kender.png" alt="User Image" class="rounded-circle" style="width: 30px; height: 30px; margin-right: 10px;">
-                              <span><?php ?></span>
+                              <span><?php
+                              include("../controladores/conexion.php");
+                              session_start();
+                              echo " ".$_SESSION['usuario'];
+                              ?></span>
                            </a>
                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                               <!-- Opciones del Dropdown -->

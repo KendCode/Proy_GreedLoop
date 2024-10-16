@@ -1,32 +1,66 @@
 <?php
+include("conexion.php");
 
-if(isset($_POST['btn3'])){
+if (isset($_POST['btnMod'])) {
+    // Recoger y sanitizar los datos
+    $nomUsu = mysqli_real_escape_string($conexion, $_POST['nom_usuario']);
+    $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
+    $apellido = mysqli_real_escape_string($conexion, $_POST['apellido']);
+    $email = mysqli_real_escape_string($conexion, $_POST['email']);
+    $contrasena = mysqli_real_escape_string($conexion, $_POST['new_password']);
+    $current_password = mysqli_real_escape_string($conexion, $_POST['current_password']);
+    $id_usuario = $_POST['id_usuario']; // Obtener ID del usuario desde el formulario
 
-	$btn3=$_POST['btn3'];
-	if($btn3=="MODIFICAR")
-	{
+    // Manejo de la imagen de perfil
+    if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] == UPLOAD_ERR_OK) {
+        $fileTmpPath = $_FILES['profile_picture']['tmp_name'];
+        $fileName = $_FILES['profile_picture']['name'];
+        $fileSize = $_FILES['profile_picture']['size'];
+        $fileType = $_FILES['profile_picture']['type'];
+        $fileNameCmps = explode(".", $fileName);
+        $fileExtension = strtolower(end($fileNameCmps));
 
-$ci=$_POST['id_usuario'];
-$nombre=$_POST['nombre'];
-//
-//echo "el ci es: ".$ci."y el nombre es: ".$nombre;
-$apellido=$_POST['apellido'];
-$password=$_POST['nom_usuario'];
-$email=$_POST['email'];
-$nro_celular=$_POST['password'];
-$direccion=$_POST['id_perfil'];
-//$id_sesion=$_POST['id_sesion'];
+        // Validar el tipo de archivo
+        $allowedExts = array('jpg', 'jpeg', 'png', 'gif');
+        if (in_array($fileExtension, $allowedExts) && $fileSize < 2000000) { // Límite de 2MB
+            // Directorio donde se guardará la imagen
+            $uploadFileDir = '../images/';
+            $dest_path = $uploadFileDir . 'profile_' . $id_usuario . '.' . $fileExtension;
 
-//primer paso
-$consulta="UPDATE usuario SET nombre = '$nombre', apellido = '$apellido', password ='$password', email = '$email', nro_celular='$nro_celular', direccion ='$direccion' WHERE usuario.ci = '$ci'";
+            // Mover el archivo subido a la ubicación deseada
+            if (move_uploaded_file($fileTmpPath, $dest_path)) {
+                $img_query = "UPDATE usuario SET imgUsu = '$dest_path' WHERE id_usuario = $id_usuario";
+                mysqli_query($conexion, $img_query);
+            } else {
+                echo "<script>alert('Error al subir la imagen')</script>";
+            }
+        } else {
+            echo "<script>alert('Tipo de archivo no permitido o tamaño demasiado grande')</script>";
+        }
+    }
 
-//segundo paso
-mysqli_query($conexion,$consulta);
+    // Actualizar los datos del usuario
+    $consulta = "UPDATE usuario SET nombre = ?, apellido = ?, nom_usuario = ?, email = ?, password = ? WHERE id_usuario = ?";
 
-echo "<script>alert('usuario modificado de manera correcta')</script>";
-   echo '<script>window.location="../administracion.php"</script>';
+    if ($stmt = mysqli_prepare($conexion, $consulta)) {
+        // Usar 'i' para el ID que es un entero
+        mysqli_stmt_bind_param($stmt, "sssssi", $nombre, $apellido, $nomUsu, $email, $contrasena, $id_usuario);
 
-	}
+        if (mysqli_stmt_execute($stmt)) {
+            echo "<script>alert('Usuario modificado de manera correcta')</script>";
+            echo '<script>window.location="../pages/index(usu).php"</script>';
+        } else {
+            echo "<script>alert('Error al modificar el usuario')</script>";
+        }
+
+        mysqli_stmt_close($stmt);
+    } else {
+        echo "<script>alert('Error en la preparación de la consulta')</script>";
+    }
 }
 
+mysqli_close($conexion);
 ?>
+
+
+
