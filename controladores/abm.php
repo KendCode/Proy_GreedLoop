@@ -1,7 +1,7 @@
 <!-- ELIMINAR USUARIO -->
 <?php
 
-include ("../conexion/conexion.php");
+include ("../controladores/conexion.php");
 
 ?>
 <?php
@@ -13,12 +13,12 @@ if(isset($_POST['btn1'])){
 
 
 
-$ci=$_POST['ci'];
+$nom_usuario=$_POST['nom_usuario'];
 //echo "el ci buscado es: ".$ci;
 
 //DELETE FROM estudiante WHERE estudiante.ci = '$ci'
 // primer
-$consulta= "DELETE FROM usuario WHERE usuario.ci = '$ci'";
+$consulta= "DELETE FROM usuario WHERE usuario.nom_usuario = '$nom_usuario'";
 //segundo paso
 mysqli_query($conexion,$consulta);
 echo "<script>alert('usuario Eliminado de manera correcta')</script>";
