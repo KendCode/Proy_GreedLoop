@@ -38,7 +38,7 @@
                            </a>
                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                               <!-- Opciones del Dropdown -->
-                              <a class="dropdown-item" href="pages/perfil.php">Perfil</a>
+                              <a class="dropdown-item" href="perfil.php">Perfil</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="logout.php">Cerrar sesión</a>
                            </div>

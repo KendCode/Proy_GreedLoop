@@ -165,7 +165,7 @@
                               <div class="row">
                                  <div class="col-md-4 col-sm-6">
                                     <div id="ho_bg" class="team_img">
-                                       <img src="images/KENDER.jpeg" alt="#" />
+                                       <img src="../images/KENDER.jpeg" alt="#" />
                                        <div class="ho_socal">
                                           <ul class="social_icont">
                                              <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -177,7 +177,7 @@
                                  </div>
                                  <div class="col-md-4 col-sm-6">
                                     <div id="ho_bg" class="team_img">
-                                       <img src="images/ram.jpeg" alt="#" />
+                                       <img src="../images/ram.jpeg" alt="#" />
                                        <div class="ho_socal">
                                           <ul class="social_icont">
                                              <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -189,7 +189,7 @@
                                  </div>
                                  <div class="col-md-4 col-sm-6 d_none1">
                                     <div id="ho_bg" class="team_img ">
-                                       <img src="images/team3.png" alt="#" />
+                                       <img src="../images/team3.png" alt="#" />
                                        <div class="ho_socal">
                                           <ul class="social_icont">
                                              <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -247,7 +247,7 @@
    </div>
    </div>
    <!-- end contact  section -->
-   <?php include ("pages/footer.php");?>
+   <?php include ("footer.php");?>
    <!-- end footer -->
    <!-- Javascript files-->
    <script src="js/jquery.min.js"></script>
