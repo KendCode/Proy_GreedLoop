@@ -149,9 +149,5 @@ include("../controladores/conexion.php");
 			</article>
 		</div>
 	</section>
-
-
-
-
 </body>
 </html>
