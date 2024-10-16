@@ -34,7 +34,7 @@ if($usuario==$resp['email'] && $contrasena==$resp['password'] || $usuario==$resp
             session_start();
             $_SESSION['admin']=$usuario;
             $_SESSION['nombre']=$resp['nombre'];
-            echo '<script>window.location="../pages/usuarioAgente.php"</script>';
+            echo '<script>window.location="../pages/index(age).php"</script>';
             break;
         case 3:
             session_start();
