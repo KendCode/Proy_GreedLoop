@@ -40,7 +40,7 @@ if($usuario==$resp['email'] && $contrasena==$resp['password'] || $usuario==$resp
             session_start();
             $_SESSION['usuario']=$usuario;
             $_SESSION['contrasena']=$contrasena;
-            echo '<script>window.location="../pages/agencias.php"</script>';
+            echo '<script>window.location="../pages/index(usu).php"</script>';
             break;
     }            
 }else{

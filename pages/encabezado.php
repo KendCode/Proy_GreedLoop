@@ -34,11 +34,11 @@
                         <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               <img src="../images/kender.png" alt="User Image" class="rounded-circle" style="width: 30px; height: 30px; margin-right: 10px;">
-                              <span>Nombre de Usuario</span>
+                              <span><?php ?></span>
                            </a>
                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                               <!-- Opciones del Dropdown -->
-                              <a class="dropdown-item" href="pages/profile.php">Perfil</a>
+                              <a class="dropdown-item" href="pages/perfil.php">Perfil</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="logout.php">Cerrar sesión</a>
                            </div>
@@ -52,16 +52,16 @@
                         
                         <ul class="navbar-nav mr-auto">
                            <li class="nav-item active">
-                              <a class="nav-link" href="index.php"> Principal </a>
+                              <a class="nav-link" href="index(usu).php"> Principal </a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="pages/about.php">acerca de</a>
+                              <a class="nav-link" href="about.php">acerca de</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="pages/servicios.php">servicios</a>
+                              <a class="nav-link" href="servicios.php">servicios</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="pages/team.php">equipo </a>
+                              <a class="nav-link" href="team.php">equipo </a>
                            </li>
                         </ul>
                      </div>

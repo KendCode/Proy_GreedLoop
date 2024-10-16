@@ -1,253 +1,351 @@
+<?php
+
+// include ("conexion/conexion.php");
+// include("bloqueo.php"); 
+// // Desactivar la visualización de errores
+// ini_set('display_errors', 0);
+// error_reporting(0);
+// //include("destroy.php");
+?>
+<?php include("encabezado.php")?>
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>webwing</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="../css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" href="../css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="../css/responsive.css">
-      <link rel="stylesheet" href="../css/owl.carousel.min.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <link rel="stylesheet" href="../css/card.css">
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-   </head>
-   <!-- body -->
-   <body class="main-layout">
-      <!-- header -->
-      <header>
-         <!-- header inner -->
-         <div class="header">
-            <div class="header_midil text-center">
-               <div class="container">
-                  <div class="row d_flex justify-content-center">
-                     <div class="col-md-4 col-sm-4 text-center">
-                        <p style="font-size: 50px; color: #8FD14F;">Green<span style="color: green;">Loop</span></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="header_bo">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-9 col-sm-7">
-                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                           <span class="navbar-toggler-icon"></span>
-                           </button>
-                           <div class="collapse navbar-collapse" id="navbarsExample04">
-                              <ul class="navbar-nav mr-auto">
-                                 <li class="nav-item active">
-                                    <a class="nav-link" href="../index.php"> Home  </a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="about.html">about</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="service.html">services</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="team.html">team </a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="client.html">Clients</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html"> contact us </a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </nav>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </header>
-      <!-- end header inner -->
-      <!-- end header -->
- 
-      <!-- service section -->
-      <section class="wrapper">
-         <div class="container-fostrap">
-           <div class="content">
-             <div class="container">
-               <div class="row">
-                 <div class="col-xs-12 col-sm-4">
-                   <div class="card">
-                     <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                       <img src="../images/metales.jpg" />
-                     </a>
-                     <div class="card-content">
-                       <h4 class="card-title">
-                         <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">METALES</a>
-                       </h4>
-                       <p class="">
-                        El reciclaje de metales ayuda a conservar recursos naturales, reducir el consumo de energía y disminuir la emisión de gases de efecto invernadero. 
-                        Estos materiales pueden provenir de diversos productos.
-                     </div>
-                     <div class="card-read-more">
-                       <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html" class="btn btn-link btn-block">
-                         Ingresar
-                       </a>
-                     </div>
-                   </div>
-                 </div>
-                 <div class="col-xs-12 col-sm-4">
-                   <div class="card">
-                     <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
-                       <img src="../images/plasticos.jpg" />
-                     </a>
-                     <div class="card-content">
-                       <h4 class="card-title">
-                         <a href="http://www.fostrap.com/2016/02/awesome-material-design-responsive-menu.html">PLASTICOS</a>
-                       </h4>
-                       <p class="">
-                        El reciclaje de plásticos implica la recolección, clasificación y trituración de residuos plásticos, 
-                        seguido de su fundición para reutilizar en nuevos productos. 
-                        Este proceso optimiza recursos y reduce la dependencia de plásticos vírgenes
-                     </div>
-                     <div class="card-read-more">
-                       <a href="https://codepen.io/wisnust10/full/ZWERZK/" class="btn btn-link btn-block">
-                        Ingresar
-                       </a>
-                     </div>
-                   </div>
-                 </div>
-                 <div class="col-xs-12 col-sm-4">
-                   <div class="card">
-                     <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
-                       <img src="../images/papeles.jpg" />
-                     </a>
-                     <div class="card-content">
-                       <h4 class="card-title">
-                         <a href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">PAPELES
-                         </a>
-                       </h4>
-                       <p class="">
-                        El reciclaje de papel implica la recolección y clasificación de residuos de papel, su desintegración en pulpa mediante procesos de agua y
-                         productos químicos para eliminar contaminantes (tintas, adhesivos)
-                       </p>
-                     </div>
-                     <div class="card-read-more">
-                       <a href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html" class="btn btn-link btn-block">
-                        Ingresar
-                       </a>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </section>
-      <!-- service section -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>AGENCIA</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="../css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="../css/responsive.css">
+   <link rel="stylesheet" href="../css/owl.carousel.min.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/ventas.css" rel="stylesheet" />
+</head>
 
-      <!--  footer -->
-      <footer >
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <a class="logo2" href="#"><img src="../images/loogo2.png" alt="#"/></a>
-                  </div>
-                  <div class="col-lg-5 col-md-6 col-sm-6">
-                     <h3>Contact Us</h3>
-                     <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> London 145
-                           <br> United Kingdom 
-                        </li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>demo@gmail.com<br> demo@gmail.com</li>
-                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+01 1234567890<br>+01 1234567889</li>
-                     </ul>
-                     <ul class="social_icon">
-                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Menus</h3>
-                     <ul class="link_icon">
-                        <li > <a href="../index.html"> Home</a></li>
-                        <li>
-                           <a href="about.html">
-                              </i>About Us  
-                        </li>
-                        <li class="active"> <a href="servicios.php"> </i>Services</a></li>
-                         <li> <a href="team.html"></i>Team</a></li>
-                        <li> <a href="client.html"></i>Clients</a></li>
-                        <li> <a href="contact.html"></i>Contact us</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                     <h3>Recent Post</h3>
-                     <ul class="link_icon">
-                        <li > <a href="#"> Participate in staff </a></li>
-                        <li>
-                           <a href="#">
-                              meetings manage 
-                        </li>
-                        <li> <a href="#"> dedicated to </a></li>
-                        <li> <a href="#"> marketing</a></li>
-                        <li> <a href="#"> November 25, 2019</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Newsletter</h3>
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12 ">
-                              <input class="news" placeholder="Your Email" type="type" name="Your Email"> 
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btn">Send</button>
-                           </div>
+<body>
+    <!-- Section-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <!-- Agencia 1 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image -->
+                        <img class="card-img-top" src="../images/agencias/agencia1.jpg" alt="..."/>
+                        <!-- Product details -->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name -->
+                                <h5 class="fw-bolder">EcoRecyclers</h5>
+                                <!-- Product reviews -->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star"></div>
+                                </div>
+                            </div>
                         </div>
-                     </form>
-                  </div>
-               </div>
+                        <!-- Product actions -->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <form method="post" action="../registro.php">
+                                    <!-- Hidden Checkbox -->
+                                    <input type="checkbox" name="producto[]" value="tenis1" id="tenis1" style="display:none;" onclick="addToCart()">
+                                    <!-- Custom Button -->
+                                    <label for="tenis1" class="btn btn-outline-dark mt-auto">
+                                        Ver mas
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agencia 2 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image -->
+                        <img class="card-img-top" src="../images/agencias/agencia2.jpg" style="width: 300px; height: 200px;"/>
+                        <!-- Product details -->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name -->
+                                <h5 class="fw-bolder">Reciclarte</h5>
+                                <!-- Product reviews -->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-half"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product actions -->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <form method="post" action="../registro.php">
+                                    <!-- Hidden Checkbox -->
+                                    <input type="checkbox" name="producto[]" value="tenis1" id="tenis1" style="display:none;" onclick="addToCart()">
+                                    <!-- Custom Button -->
+                                    <label for="tenis1" class="btn btn-outline-dark mt-auto">
+                                        Ver mas
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agencia 3 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image -->
+                        <img class="card-img-top" src="../images/agencias/agencia3.jpg" style="width: 300px; height: 200px;"/>
+                        <!-- Product details -->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name -->
+                                <h5 class="fw-bolder">EcoTransforma</h5>
+                                <!-- Product reviews -->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-half"></div>
+                                    <div class="bi-star"></div>
+                                    <div class="bi-star"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product actions -->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <form method="post" action="../registro.php">
+                                    <!-- Hidden Checkbox -->
+                                    <input type="checkbox" name="producto[]" value="tenis1" id="tenis1" style="display:none;" onclick="addToCart()">
+                                    <!-- Custom Button -->
+                                    <label for="tenis1" class="btn btn-outline-dark mt-auto">
+                                        Ver mas
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agencia 4 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image -->
+                        <img class="card-img-top" src="../images/agencias/agencia4.jpg" style="width: 300px; height: 200px;"/>
+                        <!-- Product details -->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name -->
+                                <h5 class="fw-bolder">CicloVida</h5>
+                                <!-- Product reviews -->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star"></div>
+                                    <div class="bi-star"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product actions -->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <form method="post" action="../registro.php">
+                                    <!-- Hidden Checkbox -->
+                                    <input type="checkbox" name="producto[]" value="tenis1" id="tenis1" style="display:none;" onclick="addToCart()">
+                                    <!-- Custom Button -->
+                                    <label for="tenis1" class="btn btn-outline-dark mt-auto">
+                                        Ver mas
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agencia 5 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image -->
+                        <img class="card-img-top" src="../images/agencias/agencia5.jpg" alt="..." />
+                        <!-- Product details -->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name -->
+                                <h5 class="fw-bolder">ReusaMás</h5>
+                                <!-- Product reviews -->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-half"></div>
+                                    <div class="bi-star"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product actions -->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <form method="post" action="../registro.php">
+                                    <!-- Hidden Checkbox -->
+                                    <input type="checkbox" name="producto[]" value="tenis1" id="tenis1" style="display:none;" onclick="addToCart()">
+                                    <!-- Custom Button -->
+                                    <label for="tenis1" class="btn btn-outline-dark mt-auto">
+                                        Ver mas
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agencia 6 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image -->
+                        <img class="card-img-top" src="../images/agencias/agencia6.jpg" alt="..." />
+                        <!-- Product details -->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name -->
+                                <h5 class="fw-bolder">CeroHuella</h5>
+                                <!-- Product reviews -->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product actions -->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <form method="post" action="../registro.php">
+                                    <!-- Hidden Checkbox -->
+                                    <input type="checkbox" name="producto[]" value="tenis1" id="tenis1" style="display:none;" onclick="addToCart()">
+                                    <!-- Custom Button -->
+                                    <label for="tenis1" class="btn btn-outline-dark mt-auto">
+                                        Ver mas
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agencia 7 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image -->
+                        <img class="card-img-top" src="../images/agencias/agencia7.jpg" alt="..." />
+                        <!-- Product details -->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name -->
+                                <h5 class="fw-bolder">EcoRevolución</h5>
+                                <!-- Product reviews -->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product actions -->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <form method="post" action="../registro.php">
+                                    <!-- Hidden Checkbox -->
+                                    <input type="checkbox" name="producto[]" value="tenis1" id="tenis1" style="display:none;" onclick="addToCart()">
+                                    <!-- Custom Button -->
+                                    <label for="tenis1" class="btn btn-outline-dark mt-auto">
+                                        Ver mas
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agencia 8 -->
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image -->
+                        <img class="card-img-top" src="../images/agencias/agencia8.jpg" alt="..." />
+                        <!-- Product details -->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name -->
+                                <h5 class="fw-bolder">Reciclaje Urbano</h5>
+                                <!-- Product reviews -->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-half"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product actions -->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <form method="post" action="../registro.php">
+                                    <!-- Hidden Checkbox -->
+                                    <input type="checkbox" name="producto[]" value="tenis1" id="tenis1" style="display:none;" onclick="addToCart()">
+                                    <!-- Custom Button -->
+                                    <label for="tenis1" class="btn btn-outline-dark mt-auto">
+                                        Ver mas
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <p>© 2019 All Rights Reserved.<a href="https://html.design/"> Free  html Templates</a></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
-      <!-- end footer -->
-      <!-- Javascript files-->
-      <script src="../js/jquery.min.js"></script>
-      <script src="../js/popper.min.js"></script>
-      <script src="../js/bootstrap.bundle.min.js"></script>
-      <script src="../js/jquery-3.0.0.min.js"></script>
-      <script src="../js/owl.carousel.min.js"></script>
-      <!-- sidebar -->
-      <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="../js/custom.js"></script>
-   </body>
+        </div>
+    </section>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- JavaScript para incrementar el contador del carrito -->
+    <script>
+        /*let cartCount = 0;
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById('cart-count').textContent = cartCount;
+        }*/
+        let cartCount = 0;
+
+        function addToCart(productName) {
+            cartCount++;
+            document.getElementById('cart-count').textContent = cartCount;
+            const input = document.getElementById(productName);
+            input.checked = true;
+        }
+    </script>
+</body>
+<?php include ("footer.php");?>
 </html>
