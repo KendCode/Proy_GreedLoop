@@ -189,61 +189,46 @@ if ($id_sesion == 1 || $id_sesion == 2 || $id_sesion == 3) {
 }
 }
 ?>
- <!-- REGISTRO DE PRODUCTO -->
+ <!-- REGISTRO DE AGENCIA -->
 
 <?php
 
-if(isset($_POST['btn4'])){
+// Verificar si se ha enviado el formulario
+if (isset($_POST['btn4'])) {
 
-	$btn4=$_POST['btn4'];
-	if($btn4=="REGISTRAR")
-	{
+    $btn4 = $_POST['btn4'];
+    if ($btn4 == "REGISTRAR") {
 
-$id_producto=$_POST['id_producto'];
-// echo "el nuevo ci es: ".$ci;
-$color=$_POST['color'];
-$stock=$_POST['stock'];
-$talla=$_POST['talla'];
-$descrip_producto=$_POST['descrip_producto'];
-$precio_unitario=$_POST['precio_unitario'];
-$id_marca=$_POST['id_marca'];
-//$contrasena=$_POST['contrasena'];
+        $id_agencia = $_POST['id_agencia']; // Asegúrate de tener este campo en el formulario
+        $nombreAgencia = $_POST['nombreAgencia'];
+        $descripcion = $_POST['descripcion'];
+        $direccion = $_POST['direccion'];
 
-// codigo para guardar imagen
-
-
-        /*$nombre_foto   = $_FILES['archivo']['name'];
+        // Código para guardar la imagen
+        $nombre_foto = $_FILES['archivo']['name'];
         $guardado = $_FILES['archivo']['tmp_name'];
-        $tipo     = $_FILES['archivo']['type'];
+        $extension = pathinfo($nombre_foto, PATHINFO_EXTENSION);
+        $nombre_archivo = $id_agencia . '.' . $extension; // Guardar la imagen con el ID de la agencia
 
-
-
-        $extension = pathinfo($nombre_foto, PATHINFO_EXTENSION);*/
-/*echo "el nombre del archivo es: ".$nombre;
-echo "el guardado del archivo es: ".$guardado;
-echo "el tipo del archivo es: ".$tipo;
-echo "la extension del archivo es: ".$extension;*/
-
-        /*$nombre_archivo = $ci . '.' . $extension;
-
-        //if (move_uploaded_file($guardado, '/rudeal/sin_firmas/' . $nombre_archivo)) {
-        if (move_uploaded_file($guardado, 'C:/xampp1/htdocs/2-2024/images/fotos/' . $nombre_archivo)) {
-
-            echo "archivo guardado con exito";
+        // Guardar la imagen en el directorio
+        if (move_uploaded_file($guardado, 'C:/xampp/htdocs/Proy_GreedLoop/images/agencias/' . $nombre_archivo)) {
+            echo "Archivo guardado con éxito";
         } else {
-            echo "archivo no guardado";
+            echo "Archivo no guardado";
+            exit; // Detener el script si la imagen no se guarda correctamente
+        }
 
-        }*/
-// primer paso para el query
-$consulta="INSERT INTO producto (id_producto, color, stock, talla, descrip_producto, precio_unitario, id_marca) VALUES ('$id_producto','$color',
- '$stock', '$talla', '$descrip_producto' ,'$precio_unitario', '$id_marca')";
-//segundo paso
-mysqli_query($conexion,$consulta);
+        // Query para insertar la agencia junto con la imagen
+        $consulta = "INSERT INTO agencia (id_agencia, nombreAgencia, descripcion, direccion, imagen) 
+                     VALUES ('$id_agencia', '$nombreAgencia', '$descripcion', '$direccion', '$nombre_archivo')";
 
-echo "<script>alert('producto registrado de manera correcta')</script>";
-   echo '<script>window.location="../administracion.php"</script>';
-
-
-}
+        // Ejecutar la consulta
+        if (mysqli_query($conexion, $consulta)) {
+            echo "<script>alert('Agencia registrada de manera correcta')</script>";
+            echo '<script>window.location="../agencias.php"</script>';
+        } else {
+            echo "Error al registrar la agencia: " . mysqli_error($conexion);
+        }
+    }
 }
 ?>

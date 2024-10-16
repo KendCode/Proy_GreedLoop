@@ -10,14 +10,16 @@ include("../controladores/conexion.php");
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<title>Perfil Agencia</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../admin/css/main.css">
 </head>
+
 <body>
-    <!-- SideBar -->
+	<!-- SideBar -->
 	<section class="full-box cover dashboard-sideBar">
 		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
 		<div class="full-box dashboard-sideBar-ct">
@@ -31,11 +33,11 @@ include("../controladores/conexion.php");
 					<img src="../admin/assets/avatars/AdminMaleAvatar.png" alt="UserIcon">
 					<figcaption class="text-center text-titles">
 						<?php
-                			// include("conexion/conexion.php");
-                			// session_start();
-                			// echo "<h2 class='display-4 fw-bolder'>".$_SESSION['admin']."</h2>";
-                		?>
-				</figcaption>
+						// include("conexion/conexion.php");
+						// session_start();
+						// echo "<h2 class='display-4 fw-bolder'>".$_SESSION['admin']."</h2>";
+						?>
+					</figcaption>
 				</figure>
 				<ul class="full-box list-unstyled text-center">
 					<li>
@@ -66,41 +68,46 @@ include("../controladores/conexion.php");
 				</li>
 			</ul>
 		</nav>
-		
+
 		<!-- TODO CONTENIDO PAGINA -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles">Registra tu Agencia</h1>
+				<h1 class="text-titles">Registra tu Agencia</h1>
 			</div>
 		</div>
-        <div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-12"> <!-- Ajusta el tamaño de la columna si es necesario -->
-            <form class="shadow p-4">
-                <div class="mb-3"> <!-- Centra el contenido del formulario -->
-                    <label for="username">Nombre de la Agencia</label>
-                    <input type="text" class="form-control mx-auto" name="nom_age" id="username" placeholder="Username">
-                </div>
-                <div class="mb-3"> <!-- Centra el contenido del formulario -->
-                    <label for="desc">Descripcion de la Agencia</label>
-                    <input type="text" class="form-control mx-auto" name="descAge" id="username" placeholder="Username">
-                </div>
-                <div class="mb-3"> <!-- Centra el contenido del formulario -->
-                    <label for="direc">Direccion de la Agencia</label>
-                    <input type="text" class="form-control mx-auto" name="DirAge" id="username" placeholder="Username">
-                </div>
-                <div class="mb-3"> <!-- Centra el contenido del formulario -->
-                    <label for="imgAgen">Imagen de la Agencia</label>
-                    <input type="file" class="form-control mx-auto" name="imgAge" id="username" placeholder="Username">
-                </div>
-                <div class="mb-3 text-center">
-                    <h1><button type="submit" class="btn btn-primary">REGISTRAR</button></h1>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+		<div class="container mt-5" action="../controladores/abm.php" method="post">
+			<div class="row justify-content-center">
+				<div class="col-md-12"> <!-- Ajusta el tamaño de la columna si es necesario -->
+					<form class="shadow p-4" method="POST" enctype="multipart/form-data">
+						<div class="mb-3">
+							<label for="id_agencia">ID de la Agencia</label>
+							<input type="text" class="form-control mx-auto" name="id_agencia" id="id_agencia" placeholder="ID de la Agencia">
+						</div>
+						<div class="mb-3">
+							<label for="nombreAgencia">Nombre de la Agencia</label>
+							<input type="text" class="form-control mx-auto" name="nombreAgencia" id="nombreAgencia" placeholder="nombre">
+						</div>
+						<div class="mb-3">
+							<label for="descripcion">Descripción de la Agencia</label>
+							<input type="text" class="form-control mx-auto" name="descripcion" id="descripcion" placeholder="descripción">
+						</div>
+						<div class="mb-3">
+							<label for="direccion">Dirección de la Agencia</label>
+							<input type="text" class="form-control mx-auto" name="direccion" id="direccion" placeholder="dirección">
+						</div>
+						<div class="mb-3">
+							<label for="archivo">Imagen de la Agencia</label>
+							<input type="file" class="form-control mx-auto" name="archivo" id="archivo">
+						</div>
+						<div class="mb-3 text-center">
+							<input type="submit" name="btn4" value="REGISTRAR" class="btn btn-primary">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 
 	</section>
 </body>
+
 </html>
